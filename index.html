@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ cây tư duy: Bài 10 - Protein và Enzyme (Hóa học 12 - KNTT)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+        /* Nền bảng trắng kỹ thuật số kiểu Miro / Whimsical */
+        .whiteboard-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1.25px, transparent 1.25px);
+            background-size: 24px 24px;
+        }
+        .mindmap-viewport {
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+        }
+        .mindmap-viewport:active {
+            cursor: grabbing;
+        }
+        .tree-node-card {
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .tree-node-card:hover {
+            transform: translateY(-2px) scale(1.03);
+            z-index: 30;
+        }
+        .bezier-branch {
+            transition: stroke-width 0.25s ease, opacity 0.25s ease;
+        }
+        .page-enter {
+            animation: pageFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes pageFadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- HEADER CỐ ĐỊNH -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm h-16">
+        <div class="max-w-full mx-auto px-4 sm:px-6 h-full flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="goToMindmap()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-200 shrink-0">
+                    <i data-lucide="network" class="w-5 h-5"></i>
+                </div><div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">Hóa học 12 • KNTT</span>
+                        <span class="hidden md:inline-block text-xs text-slate-400">Sơ đồ cây phân nhánh tương tác</span>
+                    </div>
+                    <h1 class="font-extrabold text-slate-900 text-sm sm:text-base leading-tight">Bài 10: Protein và Enzyme</h1>
+                </div>
+            </div>
+
+            <!-- Thanh công cụ bên phải -->
+            <div class="flex items-center gap-2">
+                <button id="btn-back-tree" onclick="goToMindmap()" class="hidden items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs sm:text-sm shadow-sm shadow-indigo-200 transition-all">
+                    <i data-lucide="git-fork" class="w-4 h-4"></i>
+                    <span>Quay lại Sơ đồ cây</span>
+                </button>
+                <div id="mindmap-header-hint" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 text-xs font-medium">
+                    <i data-lucide="mouse-pointer-click" class="w-4 h-4 text-indigo-600"></i>
+                    <span>Nhấp vào bất kỳ nhánh nào để xem chi tiết</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KHU VỰC CHÍNH: SƠ ĐỒ CÂY HOẶC TRANG CHI TIẾT -->
+    <main id="app-root" class="flex-1 flex flex-col relative">
+        <!-- Nội dung được render tự động -->
+    </main>
+
+    <script>
+        // =========================================================================
+        // 1. CẤU TRÚC CÂY PHÂN NHÁNH (HIERARCHICAL TREE DATA) - BÀI 10 HÓA 12 KNTT
+        // =========================================================================
+        const MINDMAP_TREE = {
+            id: 'root',
+            title: 'BÀI 10: PROTEIN & ENZYME',
+            subtitle: 'Hóa học 12 • Kết nối tri thức',
+            children: [
+                // ----------------- NHÁNH CHÍNH 1 (BÊN TRÁI) -----------------
+                {
+                    id: 'cau-tao',
+                    side: 'left',
+                    code: 'I',
+                    title: 'Khái niệm & Cấu tạo',
+                    keyword: 'α-amino acid • Liên kết peptide',
+                    color: '#2563eb', // Blue
+                    bgLight: '#eff6ff',
+                    border: '#93c5fd',
+                    textClass: 'text-blue-700',
+                    badgeClass: 'bg-blue-600',
+                    icon: 'atom',
+                    detail: {
+                        lead: 'Protein là những hợp chất cao phân tử thiên nhiên có vai trò nền tảng đối với cấu trúc và hoạt động sống của mọi tế bào.',blocks: [
+                            {
+                                title: 'Tổng quan về Protein',
+                                type: 'text-list',
+                                items: [
+                                    '<strong>Định nghĩa:</strong> Protein là hợp chất cao phân tử được tạo thành từ một hay nhiều chuỗi polypeptide (phân tử khối từ vài chục nghìn đến vài triệu amu).',
+                                    '<strong>Đơn vị cấu tạo:</strong> Các gốc α-amino acid liên kết với nhau bằng liên kết peptide (-CO-NH-).',
+                                    '<strong>Phân loại chính:</strong> Gồm Protein đơn giản (chỉ tạo bởi các gốc α-amino acid) và Protein phức tạp (kết hợp thêm nhóm phi protein).'
+                                ]
+                            },
+                            {
+                                title: 'Sơ đồ tổng hợp liên kết Peptide & 4 Bậc cấu trúc',
+                                type: 'svg-4-levels'
+                            }
+                        ],
+                        examNote: 'Lưu ý thi THPTQG: Thủy phân hoàn toàn protein đơn giản chỉ thu được hỗn hợp các α-amino acid (không thu được β-amino acid).',
+                        examplesList: [
+                            'Albumin (lòng trắng trứng), Fibroin (tơ tằm), Keratin (tóc, móng) là các protein đơn giản.',
+                            'Hemoglobin (hồng cầu máu) gồm chuỗi polypeptide kết hợp với nhân heme chứa ion Fe²⁺.'
+                        ]
+                    },
+                    children: [
+                        {
+                            id: 'khai-niem-phan-loai',
+                            title: 'Khái niệm & Phân loại',
+                            keyword: 'Đơn giản & Phức tạp',
+                            children: [
+                                { id: 'protein-don-gian', title: 'Protein đơn giản', keyword: 'Albumin, Fibroin...' },
+                                { id: 'protein-phuc-tap', title: 'Protein phức tạp', keyword: 'Hemoglobin (Fe²⁺)...' }
+                            ],
+                            detail: {
+                                lead: 'Dựa vào thành phần hóa học khi thủy phân, protein được chia thành hai nhóm lớn: protein đơn giản và protein phức tạp.',
+                                blocks: [
+                                    {
+                                        title: 'So sánh Lý thuyết & Ví dụ điển hình',
+                                        type: 'compare-grid',
+                                        left: {
+                                            head: '1. Protein đơn giản',
+                                            body: 'Thủy phân hoàn toàn chỉ thu được hỗn hợp các α-amino acid.',examples: ['Albumin: lòng trắng trứng, huyết thanh', 'Fibroin: sợi tơ tằm', 'Keratin: tóc, móng tay, sừng']
+                                        },
+                                        right: {
+                                            head: '2. Protein phức tạp',
+                                            body: 'Tạo thành từ protein đơn giản kết hợp thêm thành phần "phi protein" (ion kim loại, lipid, nucleic acid...).',
+                                            examples: ['Hemoglobin: globin + nhân heme (Fe²⁺)', 'Nucleoprotein: protein + nucleic acid', 'Lipoprotein: protein + lipid']
+                                        }
+                                    }
+                                ],
+                                examNote: 'Mẹo ghi nhớ: Hemoglobin trong hồng cầu máu là ví dụ kinh điển nhất về protein phức tạp.'
+                            }
+                        },
+                        {
+                            id: 'cau-truc-4-bac',
+                            title: 'Cấu tạo & 4 Bậc cấu trúc',
+                            keyword: 'Liên kết -CO-NH- • Bậc I → IV',
+                            children: [
+                                { id: 'bac-1-2', title: 'Bậc I & Bậc II', keyword: 'Trình tự • Xoắn α, gấp β' },
+                                { id: 'bac-3-4', title: 'Bậc III & Bậc IV', keyword: 'Không gian 3D • Đa chuỗi' }
+                            ],

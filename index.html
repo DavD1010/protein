@@ -67,7 +67,6 @@
 </head>
 <body class="min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
 
-  <!-- HEADER CỐ ĐỊNH -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm h-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between gap-3">
       <div class="flex items-center gap-3 cursor-pointer" onclick="goToMindmap()">
@@ -77,7 +76,8 @@
         <div>
           <div class="flex items-center gap-2">
             <span class="font-extrabold text-slate-900 text-sm sm:text-base leading-tight">Bài 10: Protein và Enzyme</span>
-            <span class="hidden md:inline-block text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">Hóa 12 • KNTT
+            <span class="hidden md:inline-block text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+              Hóa 12 • KNTT
             </span>
           </div>
           <p class="text-xs text-slate-500 hidden sm:block">Sơ đồ cây tư duy phân nhánh tương tác</p>
@@ -97,19 +97,14 @@
     </div>
   </header>
 
-  <!-- KHU VỰC CHÍNH -->
   <main id="app-root" class="flex-1 flex flex-col relative"></main>
 
   <script>
-    // =========================================================================
-    // 1. DỮ LIỆU SƠ ĐỒ CÂY TƯ DUY BÀI 10 - PROTEIN VÀ ENZYME (HÓA HỌC 12 - KNTT)
-    // =========================================================================
     const MINDMAP_TREE = {
       id: 'root',
       title: 'BÀI 10: PROTEIN & ENZYME',
       subtitle: 'Hóa học 12 • Kết nối tri thức',
       children: [
-        // --- NHÁNH CHÍNH 1 (BÊN TRÁI) ---
         {
           id: 'cau-tao',
           side: 'left',
@@ -136,7 +131,8 @@
               {
                 title: 'Sơ đồ liên kết Peptide & chuỗi Polypeptide',
                 type: 'svg-peptide'
-              },{
+              },
+              {
                 title: 'Ví dụ minh họa',
                 type: 'example-list',
                 items: [
@@ -184,7 +180,8 @@
                         title: 'Lý thuyết trọng tâm',
                         type: 'text-list',
                         items: [
-                          'Khi thủy phân hoàn toàn chỉ tạo ra các α-amino acid.','Có thể tồn tại ở dạng hình sợi (ít tan trong nước, bền cơ học) hoặc hình cầu (dễ tan hơn trong nước hoặc dung dịch muối loãng).'
+                          'Khi thủy phân hoàn toàn chỉ tạo ra các α-amino acid.',
+                          'Có thể tồn tại ở dạng hình sợi (ít tan trong nước, bền cơ học) hoặc hình cầu (dễ tan hơn trong nước hoặc dung dịch muối loãng).'
                         ]
                       },
                       {
@@ -216,3 +213,1283 @@
                         ]
                       },
                       {
+                        title: 'Ví dụ minh họa',
+                        type: 'example-list',
+                        items: [
+                          '<strong>Hemoglobin:</strong> Gồm globin (protein) và 4 nhóm heme có chứa Fe²⁺, giúp vận chuyển O₂ trong máu.',
+                          '<strong>Phosphoprotein:</strong> Như casein trong sữa, có gốc phosphoric acid.'
+                        ]
+                      }
+                    ],
+                    note: 'Lưu ý: Trong hemoglobin, sắt ở trạng thái oxi hóa +2 (Fe²⁺) mới có khả năng liên kết thuận nghịch với O₂.'
+                  }
+                }
+              ]
+            },
+            {
+              id: 'cau-truc-4-bac',
+              title: 'Cấu trúc 4 bậc',
+              keyword: 'Bậc I • Bậc II • Bậc III • Bậc IV',
+              detail: {
+                lead: 'Phân tử protein có cấu trúc không gian phức tạp được mô tả qua 4 bậc: cấu trúc bậc một, bậc hai, bậc ba và bậc bốn.',
+                sections: [
+                  {
+                    title: 'Minh họa 4 bậc cấu trúc của Protein',
+                    type: 'svg-4-levels'
+                  },
+                  {
+                    title: 'Lý thuyết từng bậc cấu trúc',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Cấu trúc bậc 1:</strong> Trình tự sắp xếp các gốc α-amino acid trong chuỗi polypeptide (giữ bởi liên kết peptide). Quyết định các bậc cấu trúc cao hơn.',
+                      '<strong>Cấu trúc bậc 2:</strong> Chuỗi polypeptide cuộn xoắn α hoặc gấp nếp β, ổn định nhờ các liên kết hydrogen giữa nhóm –NH– và –C=O.',
+                      '<strong>Cấu trúc bậc 3:</strong> Sự cuộn gập 3 chiều đặc trưng của cấu trúc bậc 2 thành dạng khối cầu hoặc sợi (nhờ liên kết hydrogen, tương tác kỵ nước, cầu disulfide –S–S–...).',
+                      '<strong>Cấu trúc bậc 4:</strong> Sự kết hợp của hai hay nhiều chuỗi polypeptide (tiểu đơn vị) với nhau.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Cấu trúc bậc 4:</strong> Phân tử hemoglobin ở người gồm 4 chuỗi polypeptide (2 chuỗi α và 2 chuỗi β).'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Chỉ cần thay đổi trình tự amino acid ở cấu trúc bậc 1 cũng có thể làm thay đổi cấu trúc không gian và hoạt tính sinh học của protein.'
+              },
+              children: [
+                {
+                  id: 'bac-1-2',
+                  title: 'Bậc I & Bậc II',
+                  keyword: 'Trình tự aa • Xoắn α, gấp nếp β',
+                  detail: {
+                    lead: 'Cấu trúc bậc I là mạch trình tự amino acid; cấu trúc bậc II là sự sắp xếp không gian cục bộ dạng xoắn α hoặc gấp nếp β.',
+                    sections: [
+                      {
+                        title: 'Lý thuyết trọng tâm',
+                        type: 'text-list',
+                        items: [
+                          '<strong>Bậc I:</strong> Trình tự các gốc α-amino acid dọc theo chuỗi polypeptide (liên kết cộng hóa trị peptide).',
+                          '<strong>Bậc II:</strong> Chuỗi polypeptide xoắn lò xo (xoắn α) hoặc xếp thành tấm gấp nếp (gấp nếp β) nhờ liên kết hydrogen.'
+                        ]
+                      },
+                      {
+                        title: 'Ví dụ minh họa',
+                        type: 'example-list',
+                        items: [
+                          '<strong>Xoắn α:</strong> Phổ biến ở protein sợi như α-keratin.',
+                          '<strong>Gấp nếp β:</strong> Có nhiều ở fibroin của tơ tằm.'
+                        ]
+                      }
+                    ],
+                    note: 'Lưu ý: Liên kết peptide bền vững hơn liên kết hydrogen khi chịu tác động nhẹ của nhiệt độ.'
+                  }
+                },
+                {
+                  id: 'bac-3-4',
+                  title: 'Bậc III & Bậc IV',
+                  keyword: 'Không gian 3D • Đa chuỗi',
+                  detail: {
+                    lead: 'Cấu trúc bậc III là hình dạng không gian 3 chiều của một chuỗi polypeptide; cấu trúc bậc IV gồm nhiều chuỗi polypeptide liên kết với nhau.',
+                    sections: [
+                      {
+                        title: 'Lý thuyết trọng tâm',
+                        type: 'text-list',
+                        items: [
+                          '<strong>Bậc III:</strong> Cấu trúc bậc II tiếp tục cuộn gập trong không gian 3 chiều nhờ liên kết hydrogen, tương tác kỵ nước, lực hút tĩnh điện và cầu disulfide (–S–S–).',
+                          '<strong>Bậc IV:</strong> Gồm nhiều chuỗi polypeptide liên kết với nhau tạo thành phức hợp hoạt động.'
+                        ]
+                      },
+                      {
+                        title: 'Ví dụ minh họa',
+                        type: 'example-list',
+                        items: [
+                          '<strong>Cấu trúc bậc III:</strong> Myoglobin (1 chuỗi polypeptide cuộn gập chặt chẽ).',
+                          '<strong>Cấu trúc bậc IV:</strong> Hemoglobin (gồm 4 tiểu đơn vị).'
+                        ]
+                      }
+                    ],
+                    note: 'Lưu ý: Khi đun nóng hoặc gặp pH mạnh, các tương tác giữ cấu trúc bậc II, III, IV dễ bị phá vỡ gây biến tính.'
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'tinh-chat',
+          side: 'left',
+          title: 'Tính chất của Protein',
+          keyword: 'Đông tụ • Thủy phân • Phản ứng màu',
+          color: '#0d9488',
+          bgLight: '#f0fdfa',
+          border: '#5eead4',
+          textClass: 'text-teal-700',
+          badgeClass: 'bg-teal-600',
+          icon: 'flask-conical',
+          detail: {
+            lead: 'Protein thể hiện các tính chất đặc trưng gồm: sự đông tụ, phản ứng thủy phân và các phản ứng màu đặc trưng (phản ứng biuret, phản ứng với HNO₃).',
+            sections: [
+              {
+                title: 'Minh họa sự đông tụ Protein',
+                type: 'svg-coagulation'
+              },
+              {
+                title: 'Tổng hợp tính chất trọng tâm',
+                type: 'text-list',
+                items: [
+                  '<strong>Sự đông tụ:</strong> Protein bị kết tủa (đông tụ) tách ra khỏi dung dịch khi đun nóng, thêm acid, base hoặc muối kim loại nặng (như Cu²⁺, Hg²⁺, Pb²⁺...).',
+                  '<strong>Phản ứng thủy phân:</strong> Đun nóng protein với dung dịch acid, base hoặc nhờ xúc tác enzyme tạo ra các chuỗi polypeptide ngắn hơn và cuối cùng là hỗn hợp α-amino acid.',
+                  '<strong>Phản ứng màu biuret:</strong> Protein (có từ 2 liên kết peptide trở lên) tác dụng với Cu(OH)₂ trong môi trường kiềm tạo hợp chất có màu tím đặc trưng.',
+                  '<strong>Phản ứng với HNO₃ đặc:</strong> Một số protein tạo kết tủa màu vàng khi đun nóng với HNO₃ đặc.'
+                ]
+              },
+              {
+                title: 'Ví dụ minh họa',
+                type: 'example-list',
+                items: [
+                  '<strong>Đông tụ:</strong> Lòng trắng trứng đông đặc lại khi luộc chín; sữa chua đông tụ khi lên men tạo lactic acid.',
+                  '<strong>Thủy phân:</strong> Quá trình tiêu hóa thức ăn chứa protein trong dạ dày và ruột non nhờ enzyme protease.'
+                ]
+              }
+            ],
+            note: 'Lưu ý: Sự đông tụ do đun nóng thường kèm biến tính không thuận nghịch (trứng chín không thể trở lại trạng thái lỏng ban đầu).'
+          },
+          children: [
+            {
+              id: 'dong-tu',
+              title: 'Sự đông tụ',
+              keyword: 'Nhiệt • Acid • Ion kim loại nặng',
+              detail: {
+                lead: 'Khi đun nóng hoặc thêm acid, base, muối kim loại nặng, cấu trúc không gian của protein bị biến đổi làm giảm độ tan và kết tủa tách ra khỏi dung dịch.',
+                sections: [
+                  {
+                    title: 'Sơ đồ quá trình đông tụ',
+                    type: 'svg-coagulation'
+                  },
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Tác nhân gây đông tụ:</strong> Nhiệt độ cao, acid, base, dung dịch muối (như NaCl bão hòa) hoặc ion kim loại nặng.',
+                      '<strong>Ví dụ 1:</strong> Đun sôi lòng trắng trứng thấy xuất hiện chất rắn màu trắng.',
+                      '<strong>Ví dụ 2:</strong> Nhỏ giấm ăn hoặc chanh vào sữa tươi làm sữa vón cục, kết tủa.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Một số muối kim loại nặng gây đông tụ protein mạnh (gây ngộ độc nếu ăn phải), trong thực phẩm người ta thường dùng lòng trắng trứng hoặc sữa như biện pháp sơ cứu tạm thời.'
+              }
+            },
+            {
+              id: 'thuy-phan',
+              title: 'Phản ứng thủy phân',
+              keyword: 'Acid / Base / Enzyme → α-amino acid',
+              detail: {
+                lead: 'Protein bị thủy phân khi đun nóng với dung dịch acid hoặc kiềm, hoặc nhờ xúc tác của enzyme, cắt đứt các liên kết peptide.',
+                sections: [
+                  {
+                    title: 'Lý thuyết trọng tâm',
+                    type: 'text-list',
+                    items: [
+                      'Thủy phân không hoàn toàn tạo các đoạn peptide ngắn hơn.',
+                      'Thủy phân hoàn toàn thu được hỗn hợp các α-amino acid.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Trong cơ thể:</strong> Protein từ thịt, cá, đậu được thủy phân nhờ enzyme (pepsin, trypsin...) thành các amino acid để cơ thể hấp thụ.',
+                      '<strong>Trong phòng thí nghiệm:</strong> Đun nóng protein với dung dịch HCl đặc hoặc NaOH đặc.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Nếu thủy phân trong môi trường kiềm hoặc acid, các amino acid tạo thành sẽ tồn tại ở dạng muối tương ứng với môi trường.'
+              }
+            },
+            {
+              id: 'phan-ung-mau',
+              title: 'Phản ứng màu',
+              keyword: 'Biuret (màu tím) • HNO₃ (vàng)',
+              detail: {
+                lead: 'Phản ứng màu giúp nhận biết sự có mặt của protein hoặc liên kết peptide trong mẫu thử.',
+                sections: [
+                  {
+                    title: 'Minh họa ống nghiệm phản ứng màu',
+                    type: 'svg-color-test'
+                  },
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Phản ứng màu biuret:</strong> Dung dịch protein + Cu(OH)₂ / OH⁻ → dung dịch màu tím.',
+                      '<strong>Phản ứng với HNO₃ đặc:</strong> Protein + HNO₃ đặc → kết tủa màu vàng (do các vòng thơm như tyrosine bị nitro hóa).'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Nhận biết lòng trắng trứng:</strong> Nhỏ vài giọt dung dịch CuSO₄ và dung dịch NaOH vào lòng trắng trứng loãng thấy xuất hiện màu tím đặc trưng.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Dipeptide (chỉ có 1 liên kết peptide) và amino acid đơn lẻ KHÔNG cho phản ứng màu biuret.'
+              }
+            }
+          ]
+        },
+        {
+          id: 'vai-tro-protein',
+          side: 'right',
+          title: 'Vai trò của Protein',
+          keyword: 'Cấu trúc • Xúc tác • Vận chuyển • Bảo vệ',
+          color: '#059669',
+          bgLight: '#ecfdf5',
+          border: '#6ee7b7',
+          textClass: 'text-emerald-700',
+          badgeClass: 'bg-emerald-600',
+          icon: 'heart-pulse',
+          detail: {
+            lead: 'Protein đảm nhiệm hầu hết các chức năng sinh học thiết yếu trong tế bào và cơ thể sinh vật.',
+            sections: [
+              {
+                title: 'Các vai trò sinh học chính',
+                type: 'text-list',
+                items: [
+                  '<strong>Vai trò cấu trúc:</strong> Xây dựng nên tế bào, mô, cơ quan (collagen, keratin, actin, myosin...).',
+                  '<strong>Vai trò xúc tác sinh học:</strong> Hầu hết enzyme có bản chất là protein, giúp phản ứng hóa sinh xảy ra nhanh và chọn lọc.',
+                  '<strong>Vai trò vận chuyển:</strong> Vận chuyển khí, chất dinh dưỡng, ion qua màng hoặc trong máu (hemoglobin, transferrin...).',
+                  '<strong>Vai trò bảo vệ, điều hòa, dự trữ:</strong> Kháng thể (miễn dịch), hormone (insulin), albumin dự trữ...'
+                ]
+              },
+              {
+                title: 'Ví dụ minh họa',
+                type: 'example-list',
+                items: [
+                  '<strong>Vận chuyển:</strong> Hemoglobin vận chuyển oxygen từ phổi đến các mô.',
+                  '<strong>Điều hòa:</strong> Insulin điều hòa nồng độ glucose trong máu.',
+                  '<strong>Bảo vệ:</strong> Các kháng thể giúp cơ thể chống lại vi khuẩn, virus.'
+                ]
+              }
+            ],
+            note: 'Lưu ý: Trong thực tế, một loại protein có thể tham gia nhiều chức năng khác nhau tùy vị trí và tương tác phân tử.'
+          },
+          children: [
+            {
+              id: 'cau-truc-xuc-tac',
+              title: 'Cấu trúc & Xúc tác',
+              keyword: 'Collagen • Keratin • Enzyme',
+              detail: {
+                lead: 'Protein tạo nên bộ khung cấu trúc cho cơ thể và đóng vai trò xúc tác cho các phản ứng sinh hóa.',
+                sections: [
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Cấu trúc:</strong> Duy trì hình dạng tế bào và độ bền cơ học của mô.',
+                      '<strong>Xúc tác:</strong> Tăng tốc độ phản ứng sinh hóa hàng triệu lần trong điều kiện ôn hòa.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Collagen:</strong> Chiếm tỉ lệ lớn ở da, gân, sụn, xương.',
+                      '<strong>Amylase:</strong> Enzyme trong nước bọt giúp thủy phân tinh bột.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Thiếu hụt hoặc rối loạn chức năng protein cấu trúc dễ gây suy giảm độ bền mô, da kém đàn hồi.'
+              }
+            },
+            {
+              id: 'van-chuyen-bao-ve',
+              title: 'Vận chuyển & Bảo vệ',
+              keyword: 'Hemoglobin • Kháng thể • Hormone',
+              detail: {
+                lead: 'Protein vận chuyển các chất đi khắp cơ thể, tham gia điều hòa trao đổi chất và bảo vệ cơ thể trước tác nhân gây bệnh.',
+                sections: [
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Vận chuyển:</strong> Đưa O₂, chất dinh dưỡng hoặc ion đến đúng nơi cần thiết.',
+                      '<strong>Bảo vệ & Điều hòa:</strong> Kháng thể nhận diện kháng nguyên; hormone điều hòa các quá trình sinh lý.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Hemoglobin:</strong> Vận chuyển O₂ và một phần CO₂ trong máu.',
+                      '<strong>Kháng thể (immunoglobulin):</strong> Giúp hệ miễn dịch vô hiệu hóa mầm bệnh.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Chế độ ăn cân bằng đạm giúp cơ thể có đủ nguyên liệu tổng hợp kháng thể và các protein chức năng.'
+              }
+            }
+          ]
+        },
+        {
+          id: 'khai-niem-enzyme',
+          side: 'right',
+          title: 'Khái niệm & Đặc điểm Enzyme',
+          keyword: 'Chất xúc tác sinh học • Tính đặc hiệu cao',
+          color: '#d97706',
+          bgLight: '#fffbeb',
+          border: '#fcd34d',
+          textClass: 'text-amber-700',
+          badgeClass: 'bg-amber-600',
+          icon: 'zap',
+          detail: {
+            lead: 'Enzyme là chất xúc tác sinh học (đa số có bản chất là protein), làm tăng tốc độ phản ứng hóa học mà không bị biến đổi sau phản ứng.',
+            sections: [
+              {
+                title: 'Minh họa cơ chế tác dụng của Enzyme',
+                type: 'svg-enzyme'
+              },
+              {
+                title: 'Đặc điểm nổi bật của Enzyme',
+                type: 'text-list',
+                items: [
+                  '<strong>Hoạt tính xúc tác rất mạnh:</strong> Tốc độ phản ứng có enzyme thường nhanh hơn rất nhiều so với xúc tác hóa học thông thường.',
+                  '<strong>Tính đặc hiệu cao:</strong> Mỗi enzyme thường chỉ xúc tác cho một hoặc một số phản ứng nhất định (đặc hiệu cơ chất, đặc hiệu phản ứng).',
+                  '<strong>Hoạt động trong điều kiện ôn hòa:</strong> Thích hợp ở nhiệt độ và pH gần với điều kiện sinh lý cơ thể.'
+                ]
+              },
+              {
+                title: 'Ví dụ minh họa',
+                type: 'example-list',
+                items: [
+                  '<strong>Urease:</strong> Chỉ xúc tác cho sự thủy phân urea, không xúc tác cho các hợp chất tương tự khác.',
+                  '<strong>Amylase:</strong> Xúc tác thủy phân tinh bột thành maltose/glucose.'
+                ]
+              }
+            ],
+            note: 'Lưu ý: Giống mọi chất xúc tác, enzyme làm tăng tốc độ phản ứng nhưng KHÔNG làm thay đổi trạng thái cân bằng của phản ứng thuận nghịch.'
+          },
+          children: [
+            {
+              id: 'dac-diem-enzyme',
+              title: 'Đặc điểm nổi bật',
+              keyword: 'Xúc tác mạnh • Đặc hiệu cao',
+              detail: {
+                lead: 'Enzyme có hiệu suất xúc tác vượt trội và tính chọn lọc cao so với chất xúc tác vô cơ.',
+                sections: [
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Tính đặc hiệu:</strong> Trung tâm hoạt động của enzyme có cấu hình khớp với cơ chất phù hợp.',
+                      '<strong>Hiệu quả cao:</strong> Một lượng nhỏ enzyme có thể chuyển hóa lượng lớn cơ chất trong thời gian ngắn.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Catalase:</strong> Phân hủy nhanh H₂O₂ thành H₂O và O₂, bảo vệ tế bào khỏi tác nhân oxi hóa.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Trung tâm hoạt động của enzyme dễ bị sai lệch cấu trúc nếu nhiệt độ vượt quá ngưỡng chịu đựng.'
+              }
+            },
+            {
+              id: 'co-che-enzyme',
+              title: 'Cơ chế xúc tác',
+              keyword: 'Enzyme + Cơ chất → Phức hợp',
+              detail: {
+                lead: 'Enzyme liên kết tạm thời với cơ chất tạo phức hợp enzyme–cơ chất, làm giảm năng lượng hoạt hóa của phản ứng.',
+                sections: [
+                  {
+                    title: 'Sơ đồ cơ chế xúc tác',
+                    type: 'svg-enzyme'
+                  },
+                  {
+                    title: 'Lý thuyết trọng tâm',
+                    type: 'text-list',
+                    items: [
+                      'Bước 1: Enzyme (E) kết hợp với cơ chất (S) tạo phức hợp trung gian (E–S).',
+                      'Bước 2: Phản ứng xảy ra thuận lợi hơn nhờ giảm năng lượng hoạt hóa, giải phóng sản phẩm (P) và tái tạo enzyme (E).'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Sau khi tạo sản phẩm, enzyme giữ nguyên bản chất hóa học để tiếp tục xúc tác cho chu trình tiếp theo.'
+              }
+            }
+          ]
+        },
+        {
+          id: 'yeu-to-anh-huong-enzyme',
+          side: 'right',
+          title: 'Yếu tố ảnh hưởng & Ứng dụng',
+          keyword: 'Nhiệt độ • pH • Nồng độ • Đời sống',
+          color: '#7c3aed',
+          bgLight: '#f5f3ff',
+          border: '#c4b5fd',
+          textClass: 'text-violet-700',
+          badgeClass: 'bg-violet-600',
+          icon: 'sliders-horizontal',
+          detail: {
+            lead: 'Hoạt tính của enzyme chịu ảnh hưởng rõ rệt bởi nhiệt độ, pH, nồng độ enzyme/cơ chất và chất ức chế; đồng thời được ứng dụng rộng rãi trong đời sống và sản xuất.',
+            sections: [
+              {
+                title: 'Các yếu tố ảnh hưởng đến hoạt tính Enzyme',
+                type: 'text-list',
+                items: [
+                  '<strong>Nhiệt độ:</strong> Mỗi enzyme có nhiệt độ tối ưu (với nhiều enzyme người khoảng 35–40 °C). Nhiệt độ quá cao gây biến tính làm mất hoạt tính.',
+                  '<strong>pH môi trường:</strong> Mỗi enzyme hoạt động tốt nhất ở một khoảng pH xác định (ví dụ pepsin ở môi trường acid mạnh của dạ dày).',
+                  '<strong>Nồng độ cơ chất và nồng độ enzyme:</strong> Khi tăng nồng độ cơ chất (ở nồng độ enzyme cố định), tốc độ tăng dần rồi đạt giá trị bão hòa.'
+                ]
+              },
+              {
+                title: 'Ứng dụng trong đời sống & sản xuất',
+                type: 'example-list',
+                items: [
+                  '<strong>Chế biến thực phẩm:</strong> Làm mềm thịt, sản xuất siro đường, làm phô mai, lên men.',
+                  '<strong>Giặt tẩy:</strong> Bột giặt sinh học chứa protease, amylase, lipase giúp tẩy vết bẩn hữu cơ hiệu quả.',
+                  '<strong>Y học & phân tích:</strong> Chẩn đoán, hỗ trợ tiêu hóa và xét nghiệm sinh hóa.'
+                ]
+              }
+            ],
+            note: 'Lưu ý: Khi đun sôi thực phẩm, các enzyme có bản chất protein sẽ bị bất hoạt — đây là nguyên lý giúp bảo quản/dừng phản ứng sinh hóa không mong muốn.'
+          },
+          children: [
+            {
+              id: 'nhiet-do-ph',
+              title: 'Nhiệt độ & pH',
+              keyword: 'Nhiệt độ tối ưu • pH đặc trưng',
+              detail: {
+                lead: 'Nhiệt độ và pH làm thay đổi trạng thái ion hóa và cấu hình không gian của enzyme, từ đó quyết định mức độ hoạt động của enzyme.',
+                sections: [
+                  {
+                    title: 'Lý thuyết & Ví dụ',
+                    type: 'text-list',
+                    items: [
+                      '<strong>Nhiệt độ quá thấp:</strong> Enzyme kém linh động nên tốc độ phản ứng chậm (nhưng chưa bị phá hủy cấu trúc).',
+                      '<strong>Nhiệt độ quá cao:</strong> Cấu trúc không gian bị phá vỡ (biến tính) → mất hoạt tính.',
+                      '<strong>pH:</strong> Thay đổi điện tích các nhóm chức ở trung tâm hoạt động, làm giảm khả năng liên kết cơ chất.'
+                    ]
+                  },
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Pepsin:</strong> Hoạt động mạnh trong môi trường acid (pH ≈ 1,5–2,5) của dịch vị dạ dày.',
+                      '<strong>Amylase nước bọt:</strong> Hoạt động thuận lợi ở pH gần trung tính (khoảng 6,5–7,5).'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Nhiệt độ thấp chỉ làm chậm hoạt động tạm thời, còn nhiệt độ quá cao có thể gây biến tính không hồi phục.'
+              }
+            },
+            {
+              id: 'ung-dung-thuc-tien',
+              title: 'Ứng dụng thực tiễn',
+              keyword: 'Thực phẩm • Tẩy rửa • Y dược',
+              detail: {
+                lead: 'Nhờ tính xúc tác đặc hiệu và thân thiện môi trường, enzyme được ứng dụng ngày càng phổ biến trong nhiều lĩnh vực.',
+                sections: [
+                  {
+                    title: 'Ví dụ minh họa',
+                    type: 'example-list',
+                    items: [
+                      '<strong>Công nghiệp thực phẩm:</strong> Sản xuất nước hoa quả trong suốt, đường glucose/fructose từ tinh bột, làm mềm thực phẩm.',
+                      '<strong>Chất tẩy rửa sinh học:</strong> Phân hủy các vết bẩn protein (máu, trứng, thức ăn) và chất béo ở nhiệt độ vừa phải.',
+                      '<strong>Y dược:</strong> Chế phẩm hỗ trợ tiêu hóa, thuốc và kit xét nghiệm sinh hóa.'
+                    ]
+                  }
+                ],
+                note: 'Lưu ý: Ứng dụng enzyme giúp tiết kiệm năng lượng và giảm hóa chất độc hại so với nhiều quy trình truyền thống.'
+              }
+            }
+          ]
+        }
+      ]
+    };
+
+    function renderSvgIllustration(type) {
+      if (type === 'svg-peptide') {
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Sơ đồ minh họa liên kết peptide trong chuỗi polypeptide</p>
+            <svg viewBox="0 0 680 155" class="w-full h-auto">
+              <rect x="0" y="0" width="680" height="155" rx="12" fill="#f8fafc" />
+              <text x="16" y="24" font-size="12" font-weight="700" fill="#334155">Đầu N (–NH₂)</text>
+              <rect x="16" y="38" width="120" height="62" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+              <text x="76" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">α-amino acid 1</text>
+              <text x="76" y="85" text-anchor="middle" font-size="11" fill="#475569">Gốc R₁</text>
+              <rect x="152" y="48" width="104" height="42" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <text x="204" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">–CO–NH–</text>
+              <rect x="272" y="38" width="120" height="62" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+              <text x="332" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">α-amino acid 2</text>
+              <text x="332" y="85" text-anchor="middle" font-size="11" fill="#475569">Gốc R₂</text>
+              <rect x="408" y="48" width="104" height="42" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <text x="460" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">–CO–NH–</text>
+              <rect x="528" y="38" width="136" height="62" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+              <text x="596" y="65" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">... α-amino acid n</text>
+              <text x="596" y="85" text-anchor="middle" font-size="11" fill="#475569">Đầu C (–COOH)</text>
+              <text x="204" y="114" text-anchor="middle" font-size="11" font-weight="600" fill="#b45309">Liên kết peptide</text>
+              <text x="460" y="114" text-anchor="middle" font-size="11" font-weight="600" fill="#b45309">Liên kết peptide</text>
+              <text x="340" y="140" text-anchor="middle" font-size="11" fill="#64748b">n gốc α-amino acid nối tiếp nhau có (n – 1) liên kết peptide trong chuỗi mạch hở</text>
+            </svg>
+          </div>
+        `;
+      }
+      if (type === 'svg-4-levels') {
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Sơ đồ 4 bậc cấu trúc của Protein</p>
+            <svg viewBox="0 0 680 165" class="w-full h-auto">
+              <rect x="0" y="0" width="680" height="165" rx="12" fill="#f8fafc" />
+              <rect x="14" y="16" width="150" height="132" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <text x="89" y="36" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Bậc I</text>
+              <line x1="28" y1="74" x2="150" y2="74" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+              <circle cx="36" cy="74" r="5" fill="#1d4ed8" />
+              <circle cx="62" cy="74" r="5" fill="#3b82f6" />
+              <circle cx="88" cy="74" r="5" fill="#1d4ed8" />
+              <circle cx="114" cy="74" r="5" fill="#3b82f6" />
+              <circle cx="140" cy="74" r="5" fill="#1d4ed8" />
+              <text x="89" y="106" text-anchor="middle" font-size="11" fill="#475569">Trình tự sắp xếp</text>
+              <text x="89" y="122" text-anchor="middle" font-size="11" fill="#475569">các gốc α-amino acid</text>
+              <rect x="178" y="16" width="150" height="132" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <text x="253" y="36" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Bậc II</text>
+              <path d="M 196 74 Q 210 50 224 74 T 252 74 T 280 74 T 308 74" fill="none" stroke="#0d9488" stroke-width="3.5" />
+              <text x="253" y="106" text-anchor="middle" font-size="11" fill="#475569">Xoắn α hoặc</text>
+              <text x="253" y="122" text-anchor="middle" font-size="11" fill="#475569">gấp nếp β (lk H)</text>
+              <rect x="342" y="16" width="150" height="132" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <text x="417" y="36" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Bậc III</text>
+              <path d="M 382 68 C 382 44, 452 44, 452 68 C 452 92, 382 92, 398 62 C 414 35, 444 88, 416 88" fill="none" stroke="#7c3aed" stroke-width="3" />
+              <text x="417" y="106" text-anchor="middle" font-size="11" fill="#475569">Cuộn gập không gian</text>
+              <text x="417" y="122" text-anchor="middle" font-size="11" fill="#475569">3 chiều đặc trưng</text>
+              <rect x="506" y="16" width="160" height="132" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <text x="586" y="36" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Bậc IV</text>
+              <circle cx="566" cy="63" r="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+              <circle cx="598" cy="63" r="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2" />
+              <circle cx="566" cy="82" r="14" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <circle cx="598" cy="82" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" />
+              <text x="586" y="114" text-anchor="middle" font-size="11" fill="#475569">Nhiều chuỗi</text>
+              <text x="586" y="130" text-anchor="middle" font-size="11" fill="#475569">polypeptide liên kết</text>
+            </svg>
+          </div>
+        `;
+      }
+      if (type === 'svg-coagulation') {
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Sơ đồ minh họa hiện tượng đông tụ Protein</p>
+            <svg viewBox="0 0 680 140" class="w-full h-auto">
+              <rect x="0" y="0" width="680" height="140" rx="12" fill="#f8fafc" />
+              <rect x="20" y="22" width="210" height="96" rx="10" fill="#ffffff" stroke="#94a3b8" />
+              <text x="125" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Dung dịch / Keo Protein</text>
+              <circle cx="85" cy="78" r="12" fill="#99f6e4" stroke="#0d9488" stroke-width="2" />
+              <circle cx="125" cy="74" r="12" fill="#99f6e4" stroke="#0d9488" stroke-width="2" />
+              <circle cx="165" cy="80" r="12" fill="#99f6e4" stroke="#0d9488" stroke-width="2" />
+              <text x="125" y="108" text-anchor="middle" font-size="11" fill="#475569">Phân tán đều trong dung dịch</text>
+              <line x1="244" y1="70" x2="396" y2="70" stroke="#0d9488" stroke-width="2.5" />
+              <polygon points="396,65 406,70 396,75" fill="#0d9488" />
+              <text x="320" y="54" text-anchor="middle" font-size="11" font-weight="700" fill="#0f766e">Đun nóng / Acid / Base / Muối</text>
+              <rect x="420" y="22" width="240" height="96" rx="10" fill="#ffffff" stroke="#0d9488" />
+              <text x="540" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#0f766e">Protein đông tụ (kết tủa)</text>
+              <circle cx="515" cy="80" r="10" fill="#0d9488" />
+              <circle cx="530" cy="76" r="10" fill="#14b8a6" />
+              <circle cx="545" cy="82" r="10" fill="#0d9488" />
+              <circle cx="560" cy="77" r="10" fill="#14b8a6" />
+              <text x="540" y="108" text-anchor="middle" font-size="11" fill="#475569">Các phân tử tụ tập & tách lớp</text>
+            </svg>
+          </div>
+        `;
+      }
+      if (type === 'svg-color-test') {
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Minh họa phản ứng màu đặc trưng của Protein</p>
+            <svg viewBox="0 0 680 155" class="w-full h-auto">
+              <rect x="0" y="0" width="680" height="155" rx="12" fill="#f8fafc" />
+              <rect x="30" y="16" width="290" height="123" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <rect x="58" y="34" width="32" height="76" rx="14" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+              <rect x="60" y="64" width="28" height="44" rx="12" fill="#a855f7" opacity="0.8" />
+              <text x="105" y="54" font-size="12" font-weight="700" fill="#6b21a8">Phản ứng Biuret</text>
+              <text x="105" y="74" font-size="11" fill="#334155">Protein + Cu(OH)₂ / OH⁻</text>
+              <text x="105" y="94" font-size="11" font-weight="600" fill="#7e22ce">→ Dung dịch màu tím</text>
+              <rect x="360" y="16" width="290" height="123" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+              <rect x="388" y="34" width="32" height="76" rx="14" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+              <rect x="390" y="64" width="28" height="44" rx="12" fill="#facc15" opacity="0.85" />
+              <text x="435" y="54" font-size="12" font-weight="700" fill="#a16207">Phản ứng với HNO₃ đặc</text>
+              <text x="435" y="74" font-size="11" fill="#334155">Protein + HNO₃ đặc, đun nóng</text>
+              <text x="435" y="94" font-size="11" font-weight="600" fill="#ca8a04">→ Kết tủa màu vàng</text>
+            </svg>
+          </div>
+        `;
+      }
+      if (type === 'svg-enzyme') {
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Sơ đồ cơ chế xúc tác của Enzyme</p>
+            <svg viewBox="0 0 680 145" class="w-full h-auto">
+              <rect x="0" y="0" width="680" height="145" rx="12" fill="#f8fafc" />
+              <rect x="20" y="24" width="185" height="96" rx="10" fill="#ffffff" stroke="#f59e0b" />
+              <text x="112" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#b45309">1. Enzyme + Cơ chất</text>
+              <circle cx="85" cy="78" r="16" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <text x="85" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">E</text>
+              <rect x="122" y="66" width="28" height="24" rx="5" fill="#fde68a" stroke="#d97706" stroke-width="2" />
+              <text x="136" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">S</text>
+              <text x="226" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#64748b">→</text>
+              <rect x="246" y="24" width="188" height="96" rx="10" fill="#ffffff" stroke="#d97706" />
+              <text x="340" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#b45309">2. Phức hợp E–S</text>
+              <circle cx="326" cy="78" r="16" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <rect x="338" y="66" width="28" height="24" rx="5" fill="#fbbf24" stroke="#b45309" stroke-width="2" />
+              <text x="340" y="108" text-anchor="middle" font-size="10.5" fill="#475569">Giảm năng lượng hoạt hóa</text>
+              <text x="454" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#64748b">→</text>
+              <rect x="474" y="24" width="186" height="96" rx="10" fill="#ffffff" stroke="#10b981" />
+              <text x="567" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#047857">3. Sản phẩm + E</text>
+              <circle cx="536" cy="78" r="15" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+              <text x="536" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">E</text>
+              <rect x="568" y="66" width="38" height="24" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="2" />
+              <text x="587" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#047857">P</text>
+            </svg>
+          </div>
+        `;
+      }
+      return '';
+    }
+
+    const state = {
+      view: 'mindmap',
+      selectedNodeId: null,
+      collapsedIds: new Set(),
+      pan: { x: 0, y: 0 },
+      zoom: 1,
+    };
+
+    function findNodeById(id, node = MINDMAP_TREE) {
+      if (node.id === id) return node;
+      if (node.children) {
+        for (const child of node.children) {
+          const found = findNodeById(id, child);
+          if (found) return found;
+        }
+      }
+      return null;
+    }
+
+    function getMainBranchStyle(nodeId, current = MINDMAP_TREE, inherited = null) {
+      if (current.color) {
+        inherited = {
+          color: current.color,
+          bgLight: current.bgLight,
+          border: current.border,
+          textClass: current.textClass,
+          badgeClass: current.badgeClass,
+          icon: current.icon,
+          rootBranchId: current.id,
+        };
+      }
+      if (current.id === nodeId) return inherited;
+      if (current.children) {
+        for (const ch of current.children) {
+          const res = getMainBranchStyle(nodeId, ch, inherited);
+          if (res) return res;
+        }
+      }
+      return inherited || {
+        color: '#4f46e5',
+        bgLight: '#eef2ff',
+        border: '#a5b4fc',
+        textClass: 'text-indigo-700',
+        badgeClass: 'bg-indigo-600',
+        icon: 'git-fork',
+        rootBranchId: 'root',
+      };
+    }
+
+    function getBreadcrumbPath(targetId, current = MINDMAP_TREE, path = []) {
+      const nextPath = [...path, current];
+      if (current.id === targetId) return nextPath;
+      if (current.children) {
+        for (const ch of current.children) {
+          const found = getBreadcrumbPath(targetId, ch, nextPath);
+          if (found) return found;
+        }
+      }
+      return null;
+    }
+
+    function goToMindmap() {
+      state.view = 'mindmap';
+      state.selectedNodeId = null;
+      render();
+    }
+
+    function openDetail(nodeId) {
+      const node = findNodeById(nodeId);
+      if (!node || !node.detail) return;
+      state.view = 'detail';
+      state.selectedNodeId = nodeId;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      render();
+    }
+
+    function toggleCollapse(event, nodeId) {
+      event.stopPropagation();
+      if (state.collapsedIds.has(nodeId)) {
+        state.collapsedIds.delete(nodeId);
+      } else {
+        state.collapsedIds.add(nodeId);
+      }
+      render();
+    }
+
+    function computeTreeLayout() {
+      const CENTER_X = 1100;
+      const CENTER_Y = 640;
+      const L1_GAP_X = 270;
+      const L2_GAP_X = 250;
+      const L3_GAP_X = 240;
+      const LEAF_H = 82;
+      const SIBLING_GAP = 14;
+      const GROUP_GAP = 26;
+      const nodes = [];
+      const edges = [];
+
+      nodes.push({
+        id: MINDMAP_TREE.id,
+        title: MINDMAP_TREE.title,
+        subtitle: MINDMAP_TREE.subtitle,
+        level: 0,
+        side: 'center',
+        x: CENTER_X,
+        y: CENTER_Y,
+        w: 236,
+        h: 82,
+        hasDetail: false,
+        childrenCount: MINDMAP_TREE.children.length,
+        isCollapsed: false,
+        style: null,
+      });
+
+      function measureSubtree(node, depth) {
+        const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+        const isCollapsed = state.collapsedIds.has(node.id);
+        if (!hasChildren || isCollapsed) {
+          return LEAF_H;
+        }
+        let total = 0;
+        node.children.forEach((child, idx) => {
+          total += measureSubtree(child, depth + 1);
+          if (idx < node.children.length - 1) {
+            total += depth === 1 ? GROUP_GAP : SIBLING_GAP;
+          }
+        });
+        return Math.max(LEAF_H, total);
+      }
+
+      function placeSide(branches, side) {
+        const dir = side === 'left' ? -1 : 1;
+        const heights = branches.map(b => measureSubtree(b, 1));
+        const totalHeight = heights.reduce((a, b) => a + b, 0) + Math.max(0, branches.length - 1) * 44;
+        let cursorY = CENTER_Y - totalHeight / 2;
+
+        branches.forEach((b1, idx1) => {
+          const h1 = heights[idx1];
+          const y1 = cursorY + h1 / 2;
+          const x1 = CENTER_X + dir * L1_GAP_X;
+          const b1Style = getMainBranchStyle(b1.id);
+          const hasL2 = Array.isArray(b1.children) && b1.children.length > 0;
+          const isL1Collapsed = state.collapsedIds.has(b1.id);
+
+          nodes.push({
+            id: b1.id,
+            title: b1.title,
+            keyword: b1.keyword,
+            level: 1,
+            side,
+            x: x1,
+            y: y1,
+            w: 196,
+            h: 66,
+            hasDetail: Boolean(b1.detail),
+            childrenCount: hasL2 ? b1.children.length : 0,
+            isCollapsed: isL1Collapsed,
+            style: b1Style,
+          });
+
+          edges.push({
+            fromId: MINDMAP_TREE.id,
+            toId: b1.id,
+            x1: CENTER_X + dir * (236 / 2),
+            y1: CENTER_Y,
+            x2: x1 - dir * (196 / 2),
+            y2: y1,
+            color: b1Style.color,
+            width: 3.5,
+            level: 1,
+          });
+
+          if (hasL2 && !isL1Collapsed) {
+            const h2List = b1.children.map(c2 => measureSubtree(c2, 2));
+            const totalH2 = h2List.reduce((a, b) => a + b, 0) + Math.max(0, b1.children.length - 1) * GROUP_GAP;
+            let cursorY2 = y1 - totalH2 / 2;
+
+            b1.children.forEach((c2, idx2) => {
+              const h2 = h2List[idx2];
+              const y2 = cursorY2 + h2 / 2;
+              const x2 = x1 + dir * L2_GAP_X;
+              const hasL3 = Array.isArray(c2.children) && c2.children.length > 0;
+              const isL2Collapsed = state.collapsedIds.has(c2.id);
+
+              nodes.push({
+                id: c2.id,
+                title: c2.title,
+                keyword: c2.keyword,
+                level: 2,
+                side,
+                x: x2,
+                y: y2,
+                w: 184,
+                h: 58,
+                hasDetail: Boolean(c2.detail),
+                childrenCount: hasL3 ? c2.children.length : 0,
+                isCollapsed: isL2Collapsed,
+                style: b1Style,
+              });
+
+              edges.push({
+                fromId: b1.id,
+                toId: c2.id,
+                x1: x1 + dir * (196 / 2),
+                y1: y1,
+                x2: x2 - dir * (184 / 2),
+                y2: y2,
+                color: b1Style.color,
+                width: 2.25,
+                level: 2,
+              });
+
+              if (hasL3 && !isL2Collapsed) {
+                const totalH3 = c2.children.length * LEAF_H + Math.max(0, c2.children.length - 1) * SIBLING_GAP;
+                let cursorY3 = y2 - totalH3 / 2;
+
+                c2.children.forEach((c3) => {
+                  const y3 = cursorY3 + LEAF_H / 2;
+                  const x3 = x2 + dir * L3_GAP_X;
+
+                  nodes.push({
+                    id: c3.id,
+                    title: c3.title,
+                    keyword: c3.keyword,
+                    level: 3,
+                    side,
+                    x: x3,
+                    y: y3,
+                    w: 176,
+                    h: 52,
+                    hasDetail: Boolean(c3.detail),
+                    childrenCount: 0,
+                    isCollapsed: false,
+                    style: b1Style,
+                  });
+
+                  edges.push({
+                    fromId: c2.id,
+                    toId: c3.id,
+                    x1: x2 + dir * (184 / 2),
+                    y1: y2,
+                    x2: x3 - dir * (176 / 2),
+                    y2: y3,
+                    color: b1Style.color,
+                    width: 1.75,
+                    level: 3,
+                  });
+
+                  cursorY3 += LEAF_H + SIBLING_GAP;
+                });
+              }
+
+              cursorY2 += h2 + GROUP_GAP;
+            });
+          }
+
+          cursorY += h1 + 44;
+        });
+      }
+
+      const leftBranches = MINDMAP_TREE.children.filter(c => c.side === 'left');
+      const rightBranches = MINDMAP_TREE.children.filter(c => c.side !== 'left');
+      placeSide(leftBranches, 'left');
+      placeSide(rightBranches, 'right');
+
+      return { nodes, edges };
+    }
+
+    function buildBezierPath(x1, y1, x2, y2) {
+      const dx = Math.abs(x2 - x1);
+      const ctrlOffset = Math.max(48, dx * 0.52);
+      const c1x = x2 > x1 ? x1 + ctrlOffset : x1 - ctrlOffset;
+      const c2x = x2 > x1 ? x2 - ctrlOffset : x2 + ctrlOffset;
+      return `M ${x1} ${y1} C ${c1x} ${y1}, ${c2x} ${y2}, ${x2} ${y2}`;
+    }
+
+    function renderMindmapView() {
+      const { nodes, edges } = computeTreeLayout();
+
+      const svgEdges = edges.map(e => {
+        const d = buildBezierPath(e.x1, e.y1, e.x2, e.y2);
+        return `
+          <path
+            d="${d}"
+            fill="none"
+            stroke="${e.color}"
+            stroke-width="${e.width}"
+            stroke-opacity="${e.level === 1 ? '0.85' : e.level === 2 ? '0.65' : '0.5'}"
+            stroke-linecap="round"
+            class="bezier-branch"
+          />
+        `;
+      }).join('');
+
+      const nodeElements = nodes.map(n => {
+        const leftPos = n.x - n.w / 2;
+        const topPos = n.y - n.h / 2;
+
+        if (n.level === 0) {
+          return `
+            <div
+              style="left:${leftPos}px; top:${topPos}px; width:${n.w}px; height:${n.h}px;"
+              class="absolute rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl border-2 border-indigo-400/60 flex flex-col items-center justify-center px-4 text-center z-20"
+            >
+              <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-300">Sơ đồ tư duy</span>
+              <div class="font-extrabold text-sm leading-snug mt-0.5">${n.title}</div>
+              <div class="text-[11px] text-slate-300 mt-0.5">${n.subtitle}</div>
+            </div>
+          `;
+        }
+
+        const st = n.style;
+        const collapseBtn = n.childrenCount > 0 ? `
+          <button
+            type="button"
+            title="${n.isCollapsed ? 'Mở rộng nhánh con' : 'Thu gọn nhánh con'}"
+            onclick="toggleCollapse(event, '${n.id}')"
+            style="border-color:${st.color}; color:${st.color};"
+            class="w-5 h-5 rounded-full bg-white border font-mono text-xs font-bold flex items-center justify-center shadow-sm hover:scale-110 transition shrink-0"
+          >
+            ${n.isCollapsed ? '+' : '−'}
+          </button>
+        ` : '';
+
+        const levelBadge = n.level === 1
+          ? `<span class="w-2 h-2 rounded-full shrink-0" style="background:${st.color}"></span>`
+          : '';
+
+        return `
+          <div
+            style="left:${leftPos}px; top:${topPos}px; width:${n.w}px; min-height:${n.h}px; background:${n.level === 1 ? st.bgLight : '#ffffff'}; border-color:${n.level === 1 ? st.color : st.border};"
+            onclick="${n.hasDetail ? `openDetail('${n.id}')` : ''}"
+            class="tree-node-card absolute rounded-xl border-2 shadow-sm hover:shadow-md px-3 py-2 flex items-center justify-between gap-1.5 ${n.hasDetail ? 'cursor-pointer' : ''} z-10"
+          >
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-1.5">
+                ${levelBadge}
+                <span class="font-bold ${n.level === 1 ? 'text-[13px] ' + st.textClass : n.level === 2 ? 'text-xs text-slate-800' : 'text-[11.5px] text-slate-700'} leading-snug truncate">
+                  ${n.title}
+                </span>
+              </div>
+              ${n.keyword ? `<p class="text-[10.5px] text-slate-500 mt-0.5 truncate">${n.keyword}</p>` : ''}
+            </div>
+            <div class="flex items-center gap-1 shrink-0">
+              ${collapseBtn}
+              ${n.hasDetail ? `<i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="flex-1 flex flex-col relative overflow-hidden whiteboard-bg">
+          <div class="fixed bottom-5 right-5 z-30 flex items-center gap-1.5 bg-white/95 backdrop-blur border border-slate-200 rounded-xl p-1.5 shadow-lg">
+            <button onclick="adjustZoom(-0.12)" title="Thu nhỏ" class="w-8 h-8 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-700 font-bold">
+              <i data-lucide="zoom-out" class="w-4 h-4"></i>
+            </button>
+            <span id="zoom-label" class="px-2 text-xs font-mono font-semibold text-slate-700 min-w-[46px] text-center">
+              ${Math.round(state.zoom * 100)}%
+            </span>
+            <button onclick="adjustZoom(0.12)" title="Phóng to" class="w-8 h-8 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-700 font-bold">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </button>
+            <div class="w-px h-5 bg-slate-200 mx-0.5"></div>
+            <button onclick="resetView()" title="Căn giữa sơ đồ" class="px-2.5 h-8 rounded-lg hover:bg-indigo-50 text-indigo-700 text-xs font-semibold flex items-center gap-1">
+              <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+              <span>Căn giữa</span>
+            </button>
+          </div>
+
+          <div class="sm:hidden px-4 pt-3 z-20">
+            <div class="bg-white/90 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-600 flex items-center gap-2 shadow-sm">
+              <i data-lucide="hand" class="w-4 h-4 text-indigo-600 shrink-0"></i>
+              <span>Kéo để di chuyển sơ đồ, chạm vào nhánh để xem chi tiết.</span>
+            </div>
+          </div>
+
+          <div id="mindmap-canvas" class="mindmap-viewport flex-1 w-full relative overflow-hidden min-h-[540px]">
+            <div
+              id="mindmap-transform-layer"
+              style="transform: translate(${state.pan.x}px, ${state.pan.y}px) scale(${state.zoom}); transform-origin: 0 0;"
+              class="w-[2200px] h-[1280px] relative"
+            >
+              <svg width="2200" height="1280" class="absolute inset-0 pointer-events-none">
+                ${svgEdges}
+              </svg>
+              ${nodeElements}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderDetailSection(sec) {
+      if (sec.type === 'text-list') {
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <i data-lucide="book-open" class="w-4 h-4 text-indigo-600"></i>
+              <span>${sec.title}</span>
+            </h3>
+            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-700 leading-relaxed list-disc pl-5">
+              ${sec.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+      if (sec.type === 'example-list') {
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-600"></i>
+              <span>${sec.title}</span>
+            </h3>
+            <div class="space-y-2.5">
+              ${sec.items.map(item => `
+                <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200/80 text-sm sm:text-[15px] text-slate-800 leading-relaxed">
+                  ${item}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      if (sec.type === 'compare-grid') {
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <i data-lucide="columns-2" class="w-4 h-4 text-indigo-600"></i>
+              <span>${sec.title}</span>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="rounded-xl border border-blue-200 bg-blue-50/50 p-4">
+                <div class="font-bold text-blue-900 text-sm mb-1.5">${sec.left.head}</div>
+                <p class="text-sm text-slate-700 mb-3">${sec.left.body}</p>
+                <p class="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-1.5">Ví dụ:</p>
+                <ul class="text-xs sm:text-sm text-slate-700 space-y-1 list-disc pl-4">
+                  ${sec.left.examples.map(ex => `<li>${ex}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="rounded-xl border border-violet-200 bg-violet-50/50 p-4">
+                <div class="font-bold text-violet-900 text-sm mb-1.5">${sec.right.head}</div>
+                <p class="text-sm text-slate-700 mb-3">${sec.right.body}</p>
+                <p class="text-xs font-semibold uppercase tracking-wider text-violet-700 mb-1.5">Ví dụ:</p>
+                <ul class="text-xs sm:text-sm text-slate-700 space-y-1 list-disc pl-4">
+                  ${sec.right.examples.map(ex => `<li>${ex}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (sec.type && sec.type.startsWith('svg-')) {
+        return renderSvgIllustration(sec.type);
+      }
+
+      return '';
+    }
+
+    function renderDetailView() {
+      const node = findNodeById(state.selectedNodeId);
+      if (!node || !node.detail) return renderMindmapView();
+
+      const st = getMainBranchStyle(node.id);
+      const trail = getBreadcrumbPath(node.id) || [];
+
+      const breadcrumbHtml = trail.map((item, index) => {
+        const isLast = index === trail.length - 1;
+        if (item.id === 'root') {
+          return `
+            <button onclick="goToMindmap()" class="text-slate-500 hover:text-indigo-600 font-medium transition">
+              Sơ đồ cây
+            </button>
+          `;
+        }
+        if (isLast) {
+          return `<span class="font-bold ${st.textClass}">${item.title}</span>`;
+        }
+        return `
+          <button onclick="openDetail('${item.id}')" class="text-slate-600 hover:text-indigo-600 font-medium transition">
+            ${item.title}
+          </button>
+        `;
+      }).join('<i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400 shrink-0"></i>');
+
+      const childLinksHtml = Array.isArray(node.children) && node.children.length > 0 ? `
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">Các nhánh nhỏ trực thuộc</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            ${node.children.map(ch => `
+              <button
+                onclick="openDetail('${ch.id}')"
+                style="border-color:${st.border};"
+                class="text-left p-3.5 rounded-xl border hover:bg-slate-50 transition flex items-center justify-between gap-2 group"
+              >
+                <div>
+                  <div class="font-bold text-sm text-slate-900 group-hover:text-indigo-600 transition">${ch.title}</div>
+                  ${ch.keyword ? `<div class="text-xs text-slate-500 mt-0.5">${ch.keyword}</div>` : ''}
+                </div>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition shrink-0"></i>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      ` : '';
+
+      const sectionsHtml = (node.detail.sections || []).map(renderDetailSection).join('');
+
+      const noteHtml = node.detail.note ? `
+        <div class="rounded-2xl bg-slate-100 border border-slate-200 p-4 sm:p-5 flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="lightbulb" class="w-4 h-4"></i>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">${node.detail.note}</p>
+        </div>
+      ` : '';
+
+      return `
+        <div class="page-enter max-w-4xl w-full mx-auto px-4 sm:px-6 py-7 space-y-6">
+          <nav class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm">
+            ${breadcrumbHtml}
+          </nav>
+
+          <div style="background:${st.bgLight}; border-color:${st.border};" class="rounded-2xl border-2 p-5 sm:p-7 shadow-sm">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white text-xs font-bold mb-3 ${st.badgeClass}">
+              <i data-lucide="${st.icon}" class="w-3.5 h-3.5"></i>
+              <span>${node.keyword || 'Kiến thức trọng tâm'}</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${node.title}</h1>
+            <p class="mt-2.5 text-sm sm:text-base text-slate-700 leading-relaxed">${node.detail.lead}</p>
+          </div>
+
+          <div class="space-y-5">
+            ${sectionsHtml}
+          </div>
+
+          ${childLinksHtml}
+
+          ${noteHtml}
+        </div>
+      `;
+    }
+
+    let isDragging = false;
+    let dragStart = { x: 0, y: 0 };
+
+    function applyTransform() {
+      const layer = document.getElementById('mindmap-transform-layer');
+      const label = document.getElementById('zoom-label');
+      if (layer) {
+        layer.style.transform = `translate(${state.pan.x}px, ${state.pan.y}px) scale(${state.zoom})`;
+      }
+      if (label) {
+        label.textContent = `${Math.round(state.zoom * 100)}%`;
+      }
+    }
+
+    function adjustZoom(delta) {
+      state.zoom = Math.min(1.6, Math.max(0.45, Number((state.zoom + delta).toFixed(2))));
+      applyTransform();
+    }
+
+    function resetView() {
+      const canvas = document.getElementById('mindmap-canvas');
+      const vw = canvas ? canvas.clientWidth : window.innerWidth;
+      const vh = canvas ? canvas.clientHeight : window.innerHeight - 64;
+      state.zoom = vw < 768 ? 0.56 : 0.85;
+      state.pan.x = Math.round(vw / 2 - 1100 * state.zoom);
+      state.pan.y = Math.round(vh / 2 - 640 * state.zoom);
+      applyTransform();
+    }
+
+    function bindCanvasEvents() {
+      const canvas = document.getElementById('mindmap-canvas');
+      if (!canvas) return;
+
+      canvas.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('.tree-node-card') || e.target.closest('button')) return;
+        isDragging = true;
+        dragStart = { x: e.clientX - state.pan.x, y: e.clientY - state.pan.y };
+        canvas.setPointerCapture(e.pointerId);
+      });
+
+      canvas.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        state.pan.x = e.clientX - dragStart.x;
+        state.pan.y = e.clientY - dragStart.y;
+        applyTransform();
+      });
+
+      canvas.addEventListener('pointerup', (e) => {
+        if (isDragging) {
+          isDragging = false;
+          try { canvas.releasePointerCapture(e.pointerId); } catch (_) {}
+        }
+      });
+
+      canvas.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 0.08 : -0.08;
+        adjustZoom(delta);
+      }, { passive: false });
+    }
+
+    function render() {
+      const appRoot = document.getElementById('app-root');
+      const btnBack = document.getElementById('btn-back-tree');
+      const hint = document.getElementById('mindmap-header-hint');
+
+      if (state.view === 'mindmap') {
+        btnBack.classList.add('hidden');
+        btnBack.classList.remove('flex');
+        hint.classList.remove('hidden');
+        appRoot.innerHTML = renderMindmapView();
+        lucide.createIcons();
+        bindCanvasEvents();
+        if (state.pan.x === 0 && state.pan.y === 0) {
+          resetView();
+        }
+      } else {
+        btnBack.classList.remove('hidden');
+        btnBack.classList.add('flex');
+        hint.classList.add('hidden');
+        appRoot.innerHTML = renderDetailView();
+        lucide.createIcons();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+  </script>
+</body>
+</html>
+
